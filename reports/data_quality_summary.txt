@@ -1,28 +1,37 @@
 DATA QUALITY SUMMARY
 
-1. Successfully fetched NAV data for:
-    - HDFC
-    - SBI
-    - ICICI
-    - NIPPON
-    - AXIS
-    - KOTAK
+1. Successfully loaded all provided CSV datasets using Pandas.
 
-2. All CSV files loaded successfully.
+2. Validation checks performed on all datasets:
+   - shape
+   - data types
+   - first 5 rows using head()
+   - missing values
+   - duplicate rows
 
-3. Dataset validation performed using:
-    - shape
-    - dtypes
-    - head()
-    - missing values
-    - duplicate checks
+3. Datasets processed:
+   - 01_fund_master.csv
+   - 02_nav_history.csv
+   - 03_aum_by_fund_house.csv
+   - 04_monthly_sip_inflows.csv
+   - 05_category_inflows.csv
+   - 06_industry_folio_count.csv
+   - 07_scheme_performance.csv
+   - 08_investor_transactions.csv
+   - 09_portfolio_holdings.csv
+   - 10_benchmark_indices.csv
 
-4. No missing values found.
+4. Observations:
+   - No duplicate rows found in any dataset.
+   - Datatypes are consistent across datasets.
+   - Financial numeric columns are stored correctly as int64 and float64.
 
-5. No duplicate rows found.
+5. Anomalies Found:
+   - The column yoy_growth_pct in 04_monthly_sip_inflows.csv contains 12 missing values.
+   - This is likely due to unavailable previous-year comparison data for initial months.
 
-6. NAV column stored as float datatype.
+6. AMFI code validation performed between:
+   - fund_master
+   - nav_history
 
-7. Date column stored as string datatype.
-
-9. Data successfully saved in raw folder.
+7. Data ingestion and validation completed successfully.
