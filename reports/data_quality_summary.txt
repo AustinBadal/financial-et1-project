@@ -1,0 +1,28 @@
+DATA QUALITY SUMMARY
+
+1. Successfully fetched NAV data for:
+    - HDFC
+    - SBI
+    - ICICI
+    - NIPPON
+    - AXIS
+    - KOTAK
+
+2. All CSV files loaded successfully.
+
+3. Dataset validation performed using:
+    - shape
+    - dtypes
+    - head()
+    - missing values
+    - duplicate checks
+
+4. No missing values found.
+
+5. No duplicate rows found.
+
+6. NAV column stored as float datatype.
+
+7. Date column stored as string datatype.
+
+9. Data successfully saved in raw folder.
